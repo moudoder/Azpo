@@ -6,6 +6,22 @@ $(document).ready(function () {
     $('body,html').animate({scrollTop: top}, 1500);
   });
 
+
+  $('.header-list__item').on('mouseenter', function() {
+    if ($('.header').hasClass('header-active')) {
+
+    }
+    else{
+      $('.header').addClass('header-active');
+      $('.white-window').addClass('modal-active');
+    }
+    $(this).on('mouseleave', function() {
+      $('.header').removeClass('header-active');
+      $('.white-window').removeClass('modal-active');
+    })
+  })
+
+
   $(".phone").mask("+7 (999) 999-9999");
 
   $('.date-input').datetimepicker({
@@ -29,8 +45,16 @@ $(document).ready(function () {
     return false;
   })
   
-
-
+  $('.header-callback').on('click', function() {
+    $('.dark-window').addClass('modal-active');
+    $('.modal-window').addClass('modal-active');
+    return false;
+  })
+  $('.dark-window, .modal-window__close').on('click', function() {
+    $('.dark-window').removeClass('modal-active');
+    $('.modal-window').removeClass('modal-active');
+    return false;
+  })
 
   $('.date-input').mask("99.99.9999");
 
@@ -38,6 +62,20 @@ $(document).ready(function () {
     $('.sort-view').removeClass('active');
     $(this).addClass('active');
   })
+
+  $('.catalog-options__btn').on('click', function() {
+    $('.catalog-options__btn').removeClass('active');
+    $(this).addClass('active');
+    return false;
+  })
+
+  $('.best-btn').on('click', function() {
+    $('.best-btn').removeClass('active');
+    $(this).addClass('active');
+    return false;
+  })
+  
+
   $('.pagination-view__block').on('click', function() {
     $('.pagination-view__block').removeClass('active');
     $(this).addClass('active');

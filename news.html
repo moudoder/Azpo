@@ -13,6 +13,29 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="dark-window"></div>
+<div class="white-window"></div>
+<div class="modal-window">
+	<img src="img/close-modal.svg" alt="" class="modal-window__close">
+	<h2 class="modal-window__title">
+		ОБРАТНЫЙ ЗВОНОК
+	</h2>
+	<h3 class="modal-window__subtitle">
+		Поможем подобрать лучший вариант
+	</h3>
+	<form action="#" class="modal-window__form">
+		<input type="text" class="modal-windo__input" placeholder="Имя:">
+		<input type="text" class="modal-windo__input" placeholder="Телефон:">
+		<textarea class="modal-windo__input modal-windo__textarea" placeholder="Сообщение:"></textarea>
+		<div class="price-form-bottom flex-a">
+			<div class="price-form-bottom-politic flex-a">
+				<input type="checkbox" checked id="price-politik-2" class="input-checkobx">
+				<label for="price-politik-2" class="tour-order-btns__politic"><p><span>Даю согласие на обработку </span><a href="#">персональных данных</a></p></label>
+			</div>
+		</div>
+		<button class="modal-windo__btn btn">Отправить</button>
+	</form>
+</div>
 <div class="header">
 	<div class="container">
 		<div class="header-top flex-a">
@@ -75,15 +98,35 @@
 		</div>
 		<div class="header-bottom flex-a">
 			<div class="header-bottom__right flex-a">
-				<img src="img/logo.png" alt="" class="header__logo">
+				<a href="index.html"><img src="img/logo.png" alt="" class="header__logo"></a>
 				<ul class="header-list flex-a">
 					<div class="header-list__item active">
 						<span class="header-list__item--title">
-							Недвижимость
+							<a href="#">Недвижимость</a>
 							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M6.90106 0L4 2.84477L1.09894 0L0 1.07761L4 5L8 1.07761L6.90106 0Z" fill="#2D4874"/>
 							</svg>
 						</span>
+						<ul class="header-sublist">
+							<li class="header-sublist__item">
+								<a href="#">Kоманда</a>
+							</li>
+							<li class="header-sublist__item">
+								<a href="#">Регалии</a>
+							</li>
+							<li class="header-sublist__item">
+								<a href="#">Kицензии</a>
+							</li>
+							<li class="header-sublist__item">
+								<a href="#">Oтзывы</a>
+							</li>
+							<li class="header-sublist__item">
+								<a href="#">Kарьера в azpo</a>
+							</li>
+							<li class="header-sublist__item">
+								<a href="#">Kонтакты</a>
+							</li>
+						</ul>
 					</div>
 					<div class="header-list__item">
 						<span class="header-list__item--title">
@@ -280,10 +323,16 @@
 					</p>
 				</div>
 			</div>
-			<form action="#" class="subscription-block-form flex-a">
+			<form action="#" class="subscription-block-form flex-a form-politic">
 				<input type="text" name="subscription-name" class="subscription-block__input" placeholder="Ваше имя:" required>
 				<input type="text" name="subscription-email" class="subscription-block__input" placeholder="Ваш e-mail:" required>
 				<button class="subscription-block__btn btn">Подписаться</button>
+				<div class="price-form-bottom flex-a">
+					<div class="price-form-bottom-politic flex-a">
+						<input type="checkbox" checked id="blue-politic" class="input-checkobx">
+						<label for="blue-politic" class="tour-order-btns__politic"><p><span>Даю согласие на обработку </span><a href="#">персональных данных</a></p></label>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>
