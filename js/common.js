@@ -6,6 +6,15 @@ $(document).ready(function () {
     $('body,html').animate({scrollTop: top}, 1500);
   });
 
+  if ($(window).width() <= 980) {
+    $('.catalog .catalog-director').insertAfter('.catalog-suit');
+    $('.catalog .catalog-banner').insertAfter('.section-pagination');
+    $('.catalog .catalog-immovables').insertAfter('.section-pagination');
+
+
+    $('.characteristics__btn').insertAfter('.characteristics-info');
+    $('.catalog-director').insertAfter('.characteristics__btn');
+  }
 
   $('.header-list__item').on('mouseenter', function() {
     if ($('.header').hasClass('header-active')) {
@@ -56,6 +65,15 @@ $(document).ready(function () {
     return false;
   })
 
+  $('.header__burger').on('click', function() {
+    $('.modal-menu').addClass('modal-menu-active');
+    return false;
+  })
+  $('.modal-menu__close').on('click', function() {
+    $('.modal-menu').removeClass('modal-menu-active');
+    return false;
+  })
+
   $('.date-input').mask("99.99.9999");
 
   $('.sort-view').on('click', function() {
@@ -100,14 +118,46 @@ $(document).ready(function () {
     fade: true,
     cssEase: 'linear',
     prevArrow: $('.single-slider-arrow--prev a'),
-    nextArrow: $('.single-slider-arrow--next a')
+    nextArrow: $('.single-slider-arrow--next a'),
+    responsive: [
+      {
+        breakpoint: 1160,
+        settings: {
+          centerMode:true,
+          fade: false,
+          variableWidth: true,
+          speed: 300,
+        }
+      },
+    ]
   });
+
+  $('.objects-row').slick({
+    infinite: true,  
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    centerMode:true,
+    fade: false,
+    variableWidth: true,
+    arrows: false,
+    mobileFirst: true,
+    responsive: [
+      {
+         breakpoint: 1160,
+         settings: "unslick"
+      }
+    ]
+    //variableWidth: true,
+   });
+
 
   $('.growth-slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    swipe: false,
   });
 
 
@@ -118,7 +168,15 @@ $(document).ready(function () {
     arrows: true,
     dots: true,
     prevArrow: $('.team-slider-arrow--prev'),
-    nextArrow: $('.team-slider-arrow--next')
+    nextArrow: $('.team-slider-arrow--next'),
+    responsive: [
+      {
+        breakpoint: 1160,
+        settings: {
+          variableWidth: true,
+        }
+      },
+    ]
   });
 
   $('.reviews-slider').slick({
