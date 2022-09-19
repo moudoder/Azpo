@@ -6,7 +6,7 @@ $(document).ready(function () {
     $('body,html').animate({scrollTop: top}, 1500);
   });
 
-  if ($(window).width() <= 980) {
+  if ($(window).width() <= 1160) {
     $('.catalog .catalog-director').insertAfter('.catalog-suit');
     $('.catalog .catalog-banner').insertAfter('.section-pagination');
     $('.catalog .catalog-immovables').insertAfter('.section-pagination');
@@ -14,6 +14,11 @@ $(document).ready(function () {
 
     $('.characteristics__btn').insertAfter('.characteristics-info');
     $('.catalog-director').insertAfter('.characteristics__btn');
+  }
+
+  if ($(window).width() <= 1160 && $(window).width() > 700) {
+    $('.subscription-catalog').insertAfter('.catalog-director');
+    //$('.best-big').insertAfter('.objects-block-start');
   }
 
   $('.header-list__item').on('mouseenter', function() {

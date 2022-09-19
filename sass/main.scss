@@ -1,0 +1,43 @@
+@import 'fonts.scss';
+@import 'style.scss';
+@import '_media.scss';
+
+
+html,body{
+	font-size: 16px;
+	overflow-x: hidden;
+}
+html{
+	
+}
+body{
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+}
+input{
+	outline: none;
+}
+
+ul,li{
+	list-style-type: none;
+	margin-bottom: 0;
+}
+p{
+	margin-bottom: 0;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+*{
+	padding: 0;
+	margin: 0;
+	outline: none!important;
+	font-family: 'Inter';
+	box-sizing: border-box;
+}
